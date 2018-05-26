@@ -1,6 +1,12 @@
 # Udacity SDC Nano degree
 # Semantic Segmentation Project
 
+## Acknowledgement
+In addition to the code walkthrough I have refereed to following two works during the development
+
+ - [Repo 1](https://github.com/maxritter/SDC-Semantic-Segmentation)
+ - [Repo 2](https://github.com/jeremy-shannon/CarND-Path-Planning-Project)
+
 ## Brief overview
 A fully convolutional neural network (FCN) based on VGG-16 is used to perform segmentation. The network learns to identify drivable area. The training and testing are performed on KITTI dataset.
 
