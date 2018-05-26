@@ -1,3 +1,47 @@
+# Udacity SDC Nano degree
+# Semantic Segmentation Project
+
+## Brief overview
+A fully convolutional neural network (FCN) based on VGG-16 is used to perform segmentation. The network learns to identify drivable area. The training and testing are performed on KITTI dataset.
+
+## Approach
+
+### Architecture
+
+A pre-trained VGG-16 network was converted to a fully convolutional network by converting the final fully connected layer to a 1x1 convolution and setting the depth equal to the number of desired classes (in this case, two: road and not-road). Performance is improved through the use of skip connections, performing 1x1 convolutions on previous VGG layers (in this case, layers 3 and 4) and adding them element-wise to upsampled (through transposed convolution) lower-level layers (i.e. the 1x1-convolved layer 7 is upsampled before being added to the 1x1-convolved layer 4). Each convolution and transpose convolution layer includes a kernel initializer and regularizer
+
+### Optimizer
+
+The loss function for the network is cross-entropy, and an Adam optimizer is used.
+
+### Training
+Cross-entropy based Adam optimizer is used.
+The hyperparameters used for training are:
+
+  - keep_prob: 0.7
+  - learning_rate: 0.0005
+  - epochs: 100
+  - batch_size: 10
+
+Average loss per batch during different ephochs
+1. 0.63
+50. 0.18
+90. 0.009
+100. 0.008
+
+## Segmentation on test images
+
+<img src="./results/res1.png" width="600">
+<img src="./results/res2.png" width="600">
+<img src="./results/res3.png" width="600">
+<img src="./results/res4.png" width="600">
+<img src="./results/res5.png" width="600">
+<img src="./results/res6.png" width="600">
+
+
+
+## *Original README*
+
 # Semantic Segmentation
 ### Introduction
 In this project, you'll label the pixels of a road in images using a Fully Convolutional Network (FCN).
