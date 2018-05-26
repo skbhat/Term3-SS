@@ -24,10 +24,10 @@ The hyperparameters used for training are:
   - batch_size: 10
 
 Average loss per batch during different ephochs
-1. 0.63
-50. 0.18
-90. 0.009
-100. 0.008
+1. Epoch 1   : 0.63
+2. Epoch 50  : 0.18
+3. Epoch 90  : 0.009
+4. Epoch 100 : 0.008
 
 ## Segmentation on test images
 
@@ -35,8 +35,10 @@ Average loss per batch during different ephochs
 <img src="./results/res2.png" width="600">
 <img src="./results/res3.png" width="600">
 <img src="./results/res4.png" width="600">
-<img src="./results/res5.png" width="600">
 <img src="./results/res6.png" width="600">
+
+Results are not good when there is too much shadow (Need to add such examples)
+<img src="./results/res5.png" width="600">
 
 
 
